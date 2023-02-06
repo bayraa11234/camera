@@ -12,13 +12,20 @@ import { useEffect } from "react";
 
 export default function Header() {
   const [navbar, setNavbar] = useState([]);
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:8000/navbar").then((res) => {
       setNavbar(res.data);
       console.log(res.data);
     });
   }, []);
-  console.log(navbar);
+
+  useEffect(() => {
+    axios.get("http://localhost:8000/products").then((res) => {
+      setProducts(res.data);
+    });
+  }, []);
+  // console.log(navbar[0].popular[0]);
   return (
     <>
       {/* hamgiin deed taliin heseg */}
@@ -88,6 +95,10 @@ export default function Header() {
           </ul>
         </div>
       </div>
+      {console.log(products[0])}
+      {products.map((product) => {
+        return <h1>{product.name}</h1>;
+      })}
     </>
   );
 }

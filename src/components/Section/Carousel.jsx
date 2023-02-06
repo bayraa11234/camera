@@ -1,34 +1,62 @@
 import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import Carousel from "react-elastic-carousel";
+// import { Carousel } from "react-responsive-carousel";
 
-export default function Carousel() {
+export default function Carousell() {
   return (
     <>
-      {/* <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> */}
+      <div className="d-flex justify-content-evenly">
+        <div className="card w-25">
+          <div className="d-flex justify-content-around align-items-center">
+            <div>
+              <img src="speakerCopy.png" alt="" />
+            </div>
+            <div className="">
+              <h4>speaker</h4>
+              <p>items 6</p>
+            </div>
+          </div>
+        </div>
+        <div className="card w-25">
+          <div className="d-flex justify-content-around align-items-center">
+            <div>
+              <img src="cameraCopy.png" alt="" />
+            </div>
+            <div className="">
+              <h4>speaker</h4>
+              <p>items 6</p>
+            </div>
+          </div>
+        </div>
+        <div className="card w-25">
+          <div className="d-flex justify-content-around align-items-center">
+            <div>
+              <img src="computer.png" alt="" />
+            </div>
+            <div className="">
+              <h4>speaker</h4>
+              <p>items 6</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <Carousel>
+        <div className="slide">
+          <div className="d-flex">
+            <img src="camera.png" className="slide-picture" alt="" />
+            <img src="speaker.png" className="slide-picture" alt="" />
+          </div>
+        </div>
+        <div className="slide">
+          <img src="speaker.png" className="slide-picture" alt="" />
+          <img src="camera.png" className="slide-picture" alt="" />
+        </div>
+        <div className="slide">
+          <img src="camera.png" className="slide-picture" alt="" />
+          <img src="speaker.png" className="slide-picture" alt="" />
+        </div>
+      </Carousel> */}
     </>
   );
 }

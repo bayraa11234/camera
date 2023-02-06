@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import Carousel from "./components/Section/Carousel";
+import Carousell from "./components/Section/Carousel";
 import Section from "./components/Section/Section";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <Header />
       <div className="container">
         <Section />
-        <Carousel />
+        <Carousell />
       </div>
       <h1>hello</h1>
     </>

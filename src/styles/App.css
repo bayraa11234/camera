@@ -44,3 +44,10 @@ ul > li:first-child {
   padding: 20px 10px;
   color: #fff;
 }
+.plus {
+  display: flex;
+}
+.slide > img {
+  width: 50%;
+  height: 500px;
+}
