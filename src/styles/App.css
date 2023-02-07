@@ -35,7 +35,7 @@ a {
   /* background-color: #eda415; */
   padding: 16.5px;
   border-radius: 20px;
-  margin-left: -85px;
+  margin-left: -80px;
   margin-top: 22px;
 }
 ul > li:first-child {
@@ -50,4 +50,9 @@ ul > li:first-child {
 .slide > img {
   width: 50%;
   height: 500px;
+}
+.BigSell-btn{
+  background-color: #eda415;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
