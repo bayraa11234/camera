@@ -10,7 +10,7 @@ function App() {
       <div className="container">
         <Section />
         <Carousell />
-        {/* <BigSell/> */}
+        <BigSell />
       </div>
       <h1>hello</h1>
     </>
