@@ -1,7 +1,9 @@
 import Header from "./components/Header/Header";
-import Carousell from "./components/Section/Carousel";
+import Category from "./components/Section/Category";
+import PopularProduct from "./components/Section/PopularProduct";
 import Section from "./components/Section/Section";
-import BigSell from "./aside/BigSell";
+
+// import BigSell from "./aside/BigSell";
 
 function App() {
   return (
@@ -9,8 +11,9 @@ function App() {
       <Header />
       <div className="container">
         <Section />
-        <Carousell />
-        <BigSell />
+        <Category />
+        <PopularProduct />
+        {/* <BigSell /> */}
       </div>
       <h1>hello</h1>
     </>

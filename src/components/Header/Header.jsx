@@ -79,7 +79,7 @@ export default function Header() {
       {/* navbariin heseg */}
       <div className="w-100 bg-light">
         <div className="container">
-          <ul className="d-flex gap-4 align-items-center">
+          <ul className="d-flex gap-4 align-items-center navbar-ul">
             {navbar.map((nav) => {
               return <li>{nav.li}</li>;
             })}
