@@ -5,6 +5,11 @@ import Section from "./components/Section/Section";
 
 import BigSell from "./aside/BigSell";
 import SpecialProduct from "./components/Section/SpecialProduct";
+import Free from "./components/Free";
+import Comments from "./components/Comments";
+import Company from "./components/Company";
+import Latest from "./components/Latest";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,8 +21,12 @@ function App() {
         <PopularProduct />
         <BigSell />
         <SpecialProduct />
+        <Free />
+        <Comments />
+        <Company />
+        <Latest />
       </div>
-      <h1>hello</h1>
+      <Footer />
     </>
   );
 }

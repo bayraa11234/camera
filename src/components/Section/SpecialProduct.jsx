@@ -41,7 +41,7 @@ export default function SpecialProduct() {
                 <h5 style={{ color: "#1B5A7D" }}>
                   JBL bar 2.1 deep bass $11,70
                 </h5>
-                <div>$11.70</div>
+                <div className="my-3">$11.70</div>
                 <div>****</div>
                 <button className="btn" style={{ backgroundColor: "#87BCD9" }}>
                   Add to card{" "}
@@ -56,21 +56,21 @@ export default function SpecialProduct() {
           </div>
         </div>
         <div className="col-4">
-          <div className="card ">
+          <div className="card h-50 d-flex justify-content-center align-items-center">
             <div className="d-flex justify-content-between align-items-center">
-              <img src="productPlay.png" alt="" style={{ maxWidth: "150px" }} />
+              <img src="productPlay.png" alt="" style={{ maxWidth: "200px" }} />
               <div className="card-body">
-                <h6>Play game</h6>
+                <h6 style={{ color: "#1B5A7D" }}>Play game</h6>
                 <div>$11.70</div>
                 <div>****</div>
               </div>
             </div>
           </div>
-          <div className="card ">
+          <div className="card h-50 d-flex justify-content-center align-items-center">
             <div className="d-flex justify-content-between align-items-center">
               <img src="computer.png" alt="" />
               <div className="card-body">
-                <h6>Play game</h6>
+                <h6 style={{ color: "#1B5A7D" }}>Play game</h6>
                 <div>$11.70</div>
                 <div>****</div>
               </div>
