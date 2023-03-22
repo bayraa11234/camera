@@ -57,6 +57,8 @@ export default function Category() {
         mouseTracking
         items={category}
         responsive={{ 0: { items: 3 } }}
+        disableButtonsControls
+        disableDotsControls
       />
     </div>
   );
