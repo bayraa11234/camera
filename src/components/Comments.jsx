@@ -65,7 +65,7 @@ export default function Comments() {
       <AliceCarousel
         autoPlay
         infinite
-        autoPlayInterval="3000"
+        autoPlayInterval="5000"
         mouseTracking
         items={user}
         responsive={{ 0: { items: 3 } }}

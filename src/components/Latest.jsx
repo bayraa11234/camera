@@ -85,10 +85,10 @@ export default function Latest() {
     </div>
   ));
   return (
-    <div>
+    <div style={{ margin: "50px 0 50px 0" }}>
       <div className="d-flex justify-content-between">
-        <h4>Latest news</h4>
-        <p>view all</p>
+        <h4 style={{ color: "#003F62" }}>Latest news</h4>
+        <p style={{ color: "#003F62" }}>view all</p>
       </div>
       <div>
         <AliceCarousel
