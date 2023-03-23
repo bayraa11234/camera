@@ -114,3 +114,11 @@ a {
   border-radius: 20px;
   border: none;
 }
+.Footer-ul {
+  padding: 5px 0 0 15px;
+}
+.Footer-ul > li {
+  list-style-type: circle;
+  color: #1b5a7d;
+  line-height: 2;
+}

@@ -9,6 +9,7 @@ import PublicImage from "../../utils/PublicImage";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [navbar, setNavbar] = useState([]);
@@ -65,7 +66,10 @@ export default function Header() {
           <div className="d-flex justify-content-evenly gap-4">
             <div style={{ color: "white" }}>
               <User />
-              &nbsp; Sign in
+              &nbsp;{" "}
+              <Link to="/Signin" style={{ color: "#fff" }}>
+                Sign in
+              </Link>
             </div>
             <div>
               <Favorite />
