@@ -77,7 +77,6 @@ export default function Footer() {
             <PublicImage path="/logo-2.png" />
             <p
               style={{
-                borderBottom: "1px solid black",
                 maxWidth: "200px",
                 color: "#1b5a7d",
                 padding: "30px 0",
@@ -85,7 +84,10 @@ export default function Footer() {
             >
               64 st james boulevard hoswick , ze2 7zj
             </p>
-            <div className="d-flex justify-content-evenly fs-5">
+            <div
+              className="d-flex justify-content-evenly fs-5"
+              style={{ borderTop: "1px solid black", paddingTop: "10px" }}
+            >
               <SiGoogle />
               <SiFacebook />
               <SiInstagram />
