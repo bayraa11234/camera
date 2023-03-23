@@ -1,5 +1,6 @@
 // import axios from "axios";
 import React from "react";
+// import RatingSize from "../Rating";
 // import { useState } from "react";
 // import { useEffect } from "react";
 
@@ -42,7 +43,9 @@ export default function SpecialProduct() {
                   JBL bar 2.1 deep bass $11,70
                 </h5>
                 <div className="my-3">$11.70</div>
-                <div>****</div>
+                <div>
+                  {/* <RatingSize/> */}
+                  </div>
                 <button className="btn" style={{ backgroundColor: "#87BCD9" }}>
                   Add to card{" "}
                   <img
