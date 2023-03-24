@@ -65,10 +65,14 @@ export default function Header() {
           </div>
           <div className="d-flex justify-content-evenly gap-4">
             <div style={{ color: "white" }}>
-              <User />
-              &nbsp;{" "}
               <Link to="/Signin" style={{ color: "#fff" }}>
                 Sign in
+              </Link>
+              &nbsp;
+              <User />
+              &nbsp;{" "}
+              <Link to="/signout" style={{ color: "#fff" }}>
+                Sign out
               </Link>
             </div>
             <div>

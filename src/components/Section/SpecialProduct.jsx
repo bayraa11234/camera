@@ -1,6 +1,6 @@
 // import axios from "axios";
 import React from "react";
-// import RatingSize from "../Rating";
+import RatingSize from "../Rating";
 // import { useState } from "react";
 // import { useEffect } from "react";
 
@@ -44,8 +44,8 @@ export default function SpecialProduct() {
                 </h5>
                 <div className="my-3">$11.70</div>
                 <div>
-                  {/* <RatingSize/> */}
-                  </div>
+                  <RatingSize />
+                </div>
                 <button className="btn" style={{ backgroundColor: "#87BCD9" }}>
                   Add to card{" "}
                   <img
@@ -58,14 +58,16 @@ export default function SpecialProduct() {
             </div>
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-4 ">
           <div className="card h-50 d-flex justify-content-center align-items-center">
             <div className="d-flex justify-content-between align-items-center">
               <img src="productPlay.png" alt="" style={{ maxWidth: "200px" }} />
               <div className="card-body">
                 <h6 style={{ color: "#1B5A7D" }}>Play game</h6>
                 <div>$11.70</div>
-                <div>****</div>
+                <div>
+                  <RatingSize />
+                </div>
               </div>
             </div>
           </div>
@@ -75,7 +77,9 @@ export default function SpecialProduct() {
               <div className="card-body">
                 <h6 style={{ color: "#1B5A7D" }}>Play game</h6>
                 <div>$11.70</div>
-                <div>****</div>
+                <div>
+                  <RatingSize />
+                </div>
               </div>
             </div>
           </div>

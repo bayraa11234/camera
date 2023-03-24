@@ -122,3 +122,15 @@ a {
   color: #1b5a7d;
   line-height: 2;
 }
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: #edc515;
+}
+.off {
+  color: #ccc;
+}

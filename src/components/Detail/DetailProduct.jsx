@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import RatingSize from "../Rating";
 
 export default function DetailProduct() {
   const [count, setCount] = useState(1);
@@ -17,7 +18,9 @@ export default function DetailProduct() {
           <h2>Play game</h2>
           <div>$11,70</div>
           <div className="d-flex">
-            <h4>* * * * * </h4>
+            <h4>
+              <RatingSize />
+            </h4>
             <span>No reviews</span>
           </div>
           <div className="d-flex">

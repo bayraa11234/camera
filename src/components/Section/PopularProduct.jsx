@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 // import ReactDOM from "react-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import RatingSize from "../Rating";
 
 export default function PopularProduct() {
   const [product, setProduct] = useState([]);
@@ -82,7 +83,9 @@ export default function PopularProduct() {
                 <div className="d-flex justify-content-between">
                   <div>
                     <div style={{ margin: "10px 0 5px 0" }}>{item.price}</div>
-                    <div>{item.reviews}</div>
+                    <div>
+                      <RatingSize />
+                    </div>
                   </div>
                   <div>
                     <img src="images/shop.png" alt="" />
