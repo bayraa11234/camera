@@ -10,6 +10,9 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 export default function Header() {
   const [navbar, setNavbar] = useState([]);
@@ -70,15 +73,6 @@ export default function Header() {
               </Link>
               &nbsp;
               <User />
-              {/* <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-              >
-                <Badge badgeContent={4} color="error">
-                  <MailIcon />
-                </Badge>
-              </IconButton> */}
               &nbsp;{" "}
               <Link to="/signout" style={{ color: "#fff" }}>
                 Sign out
@@ -86,15 +80,6 @@ export default function Header() {
             </div>
             <div>
               <Favorite />
-              {/* <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-              >
-                <Badge badgeContent={4} color="error">
-                  <Favorite />
-                </Badge>
-              </IconButton> */}
             </div>
             <div>
               <Shopping />
@@ -109,6 +94,30 @@ export default function Header() {
             {navbar.map((nav) => {
               return <li>{nav.li}</li>;
             })}
+            {/* {[
+              "Primary",
+              "Secondary",
+              "Success",
+              "Info",
+              "Warning",
+              "Danger",
+            ].map((variant) => (
+              <DropdownButton
+                as={ButtonGroup}
+                key={variant}
+                id={`dropdown-variants-${variant}`}
+                variant={variant.toLowerCase()}
+                title={variant}
+              >
+                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                <Dropdown.Item eventKey="3" active>
+                  Active Item
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+              </DropdownButton>
+            ))} */}
             <div
               style={{
                 color: "#003f62",
