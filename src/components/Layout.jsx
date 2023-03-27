@@ -14,6 +14,7 @@ function Layout() {
   return (
     <>
       <Header />
+
       <div className="container">
         <Section />
         <Category />

@@ -70,6 +70,15 @@ export default function Header() {
               </Link>
               &nbsp;
               <User />
+              {/* <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={4} color="error">
+                  <MailIcon />
+                </Badge>
+              </IconButton> */}
               &nbsp;{" "}
               <Link to="/signout" style={{ color: "#fff" }}>
                 Sign out
@@ -77,6 +86,15 @@ export default function Header() {
             </div>
             <div>
               <Favorite />
+              {/* <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={4} color="error">
+                  <Favorite />
+                </Badge>
+              </IconButton> */}
             </div>
             <div>
               <Shopping />
