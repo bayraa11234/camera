@@ -4,6 +4,7 @@ import SignIn from "./components/SignIn";
 import Layout from "./components/Layout";
 import Detail from "./components/Detail/Detail";
 import Signout from "./components/SignOut";
+import Cart from "./components/MyCart/Cart";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signout" element={<Signout />} />
         <Route path="/detail" element={<Detail />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </>
   );

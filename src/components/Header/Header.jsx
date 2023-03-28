@@ -10,9 +10,9 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
+// import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+// import DropdownButton from "react-bootstrap/DropdownButton";
 
 export default function Header() {
   const [navbar, setNavbar] = useState([]);
@@ -80,9 +80,33 @@ export default function Header() {
             </div>
             <div>
               <Favorite />
+              <span
+                style={{
+                  position: "relative",
+                  backgroundColor: "#EDA415",
+                  borderRadius: "50%",
+                  padding: "1px 3px",
+                  fontSize: "12px",
+                  color: "#fff",
+                }}
+              >
+                5
+              </span>
             </div>
             <div>
               <Shopping />
+              <span
+                style={{
+                  position: "relative",
+                  backgroundColor: "#EDA415",
+                  borderRadius: "50%",
+                  padding: "1px 3px",
+                  fontSize: "12px",
+                  color: "#fff",
+                }}
+              >
+                0
+              </span>
             </div>
           </div>
         </div>
@@ -92,32 +116,60 @@ export default function Header() {
         <div className="container">
           <ul className="d-flex gap-4 align-items-center navbar-ul">
             {navbar.map((nav) => {
-              return <li>{nav.li}</li>;
+              return (
+                <>
+                  <Dropdown>
+                    <Dropdown.Toggle
+                      id="dropdown-basic"
+                      style={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        color: "#000",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div>{nav.li}</div>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Another action
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Something else
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </>
+              );
             })}
-            {/* {[
-              "Primary",
-              "Secondary",
-              "Success",
-              "Info",
-              "Warning",
-              "Danger",
-            ].map((variant) => (
-              <DropdownButton
-                as={ButtonGroup}
-                key={variant}
-                id={`dropdown-variants-${variant}`}
-                variant={variant.toLowerCase()}
-                title={variant}
-              >
-                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-                <Dropdown.Item eventKey="3" active>
-                  Active Item
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-              </DropdownButton>
-            ))} */}
+            {/* <>
+              <Dropdown>
+                <Dropdown.Toggle
+                  id="dropdown-basic"
+                  style={{
+                    border: "none",
+                    backgroundColor: "inherit",
+                    color: "#000",
+                  }}
+                >
+                  button
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </> */}
+
             <div
               style={{
                 color: "#003f62",
@@ -130,7 +182,7 @@ export default function Header() {
           </ul>
         </div>
       </div>
-      {console.log(products[0])}
+      {/* {console.log(products[0])} */}
       {products.map((product) => {
         return <h1>{product.name}</h1>;
       })}

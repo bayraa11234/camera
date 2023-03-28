@@ -38,7 +38,7 @@ a {
   margin-left: -80px;
   margin-top: 22px;
 }
-.navbar-ul > li:first-child {
+.navbar-ul > div:first-child {
   background-color: #eda415;
   margin-right: 50px;
   padding: 20px 10px;

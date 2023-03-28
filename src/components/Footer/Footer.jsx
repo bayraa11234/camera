@@ -40,7 +40,7 @@ export default function Footer() {
             padding: "20px 30px",
           }}
         >
-          <h2>Subscribe newsletter</h2>
+          <h2 style={{ color: "#1B5A7D" }}>Subscribe newsletter</h2>
           <div className="d-flex align-items-center">
             <input
               type="email"
@@ -106,36 +106,6 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-          {/* <div className="col-3">
-            <h6>Find product</h6>
-            <ul className="Footer-ul">
-              <li>Brownze arnold</li>
-              <li>Chronograph blue</li>
-              <li>Smart phones</li>
-              <li>Automatic watch</li>
-              <li>Hair straighteners</li>
-            </ul>
-          </div>
-          <div className="col-3">
-            <p>Find product</p>
-            <ul>
-              <li>Brownze arnold</li>
-              <li>Chronograph blue</li>
-              <li>Smart phones</li>
-              <li>Automatic watch</li>
-              <li>Hair straighteners</li>
-            </ul>
-          </div>
-          <div className="col-3">
-            <p>Find product</p>
-            <ul>
-              <li>Brownze arnold</li>
-              <li>Chronograph blue</li>
-              <li>Smart phones</li>
-              <li>Automatic watch</li>
-              <li>Hair straighteners</li>
-            </ul>
-          </div> */}
         </div>
       </div>
     </div>
