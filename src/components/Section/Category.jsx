@@ -58,7 +58,7 @@ export default function Category() {
         items={category}
         responsive={{ 0: { items: 3 } }}
         disableButtonsControls
-        disableDotsControls
+        // disableDotsControls
       />
     </div>
   );

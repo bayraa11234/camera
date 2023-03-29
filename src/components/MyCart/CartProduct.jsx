@@ -10,6 +10,7 @@ export default function CartProduct() {
   useEffect(() => {
     setSubtotal(price * count);
   }, [count]);
+  const Subtotal = subtotal.toFixed(1);
   return (
     <>
       <div className="row py-5">
@@ -53,7 +54,7 @@ export default function CartProduct() {
                     +
                   </button>
                 </td>
-                <td>${subtotal}</td>
+                <td>${Subtotal}</td>
               </tr>
               <tr>
                 <td>Table cell</td>
@@ -105,7 +106,7 @@ export default function CartProduct() {
             <div className="card-body px-4 ">
               <div className="d-flex justify-content-between border-bottom">
                 <h5>Subtotal</h5>
-                <span>${subtotal}</span>
+                <span>${Subtotal}</span>
               </div>
               <div className="d-flex align-items-center py-3 border-bottom">
                 <input
@@ -136,7 +137,7 @@ export default function CartProduct() {
                 </select>
               </div>
               <div className="d-flex align-items-center justify-content-between">
-                <h6>Total amount</h6> <span>${subtotal}</span>
+                <h6>Total amount</h6> <span>${Subtotal}</span>
               </div>
               <button
                 type="button"

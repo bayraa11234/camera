@@ -12,6 +12,31 @@ export default function PopularProduct() {
       setProduct(res.data);
     });
   }, []);
+  // function filterCars(res, filter) {
+  //   switch (filter) {
+  //     case "Toyota":
+  //       return res.filter((car) => car.brand == "Toyota");
+  //     case "Lexus":
+  //       return res.filter((car) => car.brand == "Lexus");
+  //     default:
+  //       return res;
+  //   }
+  // }
+  // function deleteCar(id) {
+  //   fetch("http://localhost:3333/api/cars", {
+  //     method: "DELETE",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       id: id,
+  //     }),
+  //   });
+  //   window.location.reload();
+  // }
+  function plusCart(id) {
+    axios.post("http://localhost:8000/plusCart").then((res) => {});
+  }
   return (
     <>
       <div
@@ -72,11 +97,15 @@ export default function PopularProduct() {
                 <div>
                   <img src={item.image} alt="" className="card-img-top" />
                 </div>
-                <img
-                  src="images/wishlist.png"
-                  alt=""
-                  style={{ height: "30px" }}
-                />
+                <div>
+                  <button type="button" onClick={plusCart}>
+                    <img
+                      src="images/wishlist.png"
+                      alt=""
+                      style={{ height: "30px" }}
+                    />
+                  </button>
+                </div>
               </div>
               <div className="card-body" style={{ bottom: 0 }}>
                 <h6 style={{ color: "#1B5A7D" }}>{item.title}</h6>
@@ -88,7 +117,9 @@ export default function PopularProduct() {
                     </div>
                   </div>
                   <div>
-                    <img src="images/shop.png" alt="" />
+                    <button>
+                      <img src="images/shop.png" alt="" />
+                    </button>
                   </div>
                 </div>
               </div>

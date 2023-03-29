@@ -53,7 +53,9 @@ export default function Header() {
         <div className="container d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center gap-5">
             <div className=" Header-electron">
-              <PublicImage path="/logo1.png" />
+              <Link to="/">
+                <PublicImage path="/logo1.png" />
+              </Link>
             </div>
             <div>
               <input
@@ -94,19 +96,22 @@ export default function Header() {
               </span>
             </div>
             <div>
-              <Shopping />
-              <span
-                style={{
-                  position: "relative",
-                  backgroundColor: "#EDA415",
-                  borderRadius: "50%",
-                  padding: "1px 3px",
-                  fontSize: "12px",
-                  color: "#fff",
-                }}
-              >
-                0
-              </span>
+              <Link to="/cart" style={{ color: "#fff" }}>
+                <Shopping />
+                <span
+                  style={{
+                    position: "relative",
+                    backgroundColor: "#EDA415",
+                    borderRadius: "50%",
+                    padding: "1px 3px",
+                    fontSize: "12px",
+                    color: "#fff",
+                  }}
+                >
+                  0
+                </span>
+                Cart
+              </Link>
             </div>
           </div>
         </div>

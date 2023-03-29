@@ -134,3 +134,11 @@ button {
 .off {
   color: #ccc;
 }
+.alice-carousel__dots-item {
+  background-color: #f4f4f4 !important;
+  border: 1px solid #adadad;
+}
+.alice-carousel__dots-item.__active {
+  background-color: #eda415 !important;
+  border: none !important;
+}

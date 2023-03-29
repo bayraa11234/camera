@@ -70,7 +70,7 @@ export default function Comments() {
         items={user}
         responsive={{ 0: { items: 3 } }}
         disableButtonsControls
-        disableDotsControls
+        // disableDotsControls
       />
     </div>
   );
