@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -7,10 +8,17 @@ export default function CartProduct() {
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(11.7);
   const [subtotal, setSubtotal] = useState(price * count);
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     setSubtotal(price * count);
   }, [count]);
   const Subtotal = subtotal.toFixed(1);
+  useEffect(() => {
+    axios.get("http://localhost:8000/plusCart").then((res) => {
+      setProducts(res.data);
+    });
+  }, []);
+  // console.log(products);
   return (
     <>
       <div className="row py-5">
@@ -25,49 +33,39 @@ export default function CartProduct() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="d-flex align-items-center">
-                  <img src="images/camera.png" alt="" width="50%" />
-                  <div>
-                    <h5 style={{ color: "#003F62" }}>Play game</h5>
-                    <div>Color: Green</div>
-                    <div>Size: 30</div>
-                  </div>
-                </td>
-                <td>${price}</td>
-                <td>
-                  <button
-                    className="btn btn-secondary "
-                    onClick={() => {
-                      setCount(count - 1);
-                    }}
-                  >
-                    -
-                  </button>
-                  <button className="mx-3">{count}</button>
-                  <button
-                    className="btn btn-secondary "
-                    onClick={() => {
-                      setCount(count + 1);
-                    }}
-                  >
-                    +
-                  </button>
-                </td>
-                <td>${Subtotal}</td>
-              </tr>
-              <tr>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
+              {products.map((product) => (
+                <tr>
+                  <td className="d-flex align-items-center">
+                    <img src={product.image} alt="" width="50%" />
+                    <div>
+                      <h5 style={{ color: "#003F62" }}>{product.title}</h5>
+                      <div>Color: Green</div>
+                      <div>Size: 30</div>
+                    </div>
+                  </td>
+                  <td>{product.price}</td>
+                  <td>
+                    <button
+                      className="btn btn-secondary "
+                      onClick={() => {
+                        setCount(count - 1);
+                      }}
+                    >
+                      -
+                    </button>
+                    <button className="mx-3">{count}</button>
+                    <button
+                      className="btn btn-secondary "
+                      onClick={() => {
+                        setCount(count + 1);
+                      }}
+                    >
+                      +
+                    </button>
+                  </td>
+                  <td>${Subtotal}</td>
+                </tr>
+              ))}
             </tbody>
           </Table>
           <div className="d-flex justify-content-between my-4">

@@ -94,10 +94,10 @@ export default function Footer() {
               <SiTwitter />
             </div>
           </div>
-          {footerItems.map((item) => (
+          {footerItems.map((item, i) => (
             <div className="col-3">
               <h6 style={{ color: "color: #1b5a7d;" }}>{item.ul}</h6>
-              <ul className="Footer-ul">
+              <ul className="Footer-ul" key={i}>
                 <li>{item.li1}</li>
                 <li>{item.li2}</li>
                 <li>{item.li3}</li>
