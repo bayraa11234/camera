@@ -19,6 +19,7 @@ export default function CartProduct() {
     });
   }, []);
   const deleteCart = (id) => {
+    console.log(id);
     axios
       .delete(`http://localhost:8000/plusCart/${id}`)
       .then((response) => {
