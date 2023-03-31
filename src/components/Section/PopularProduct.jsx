@@ -134,13 +134,7 @@ export default function PopularProduct() {
                       </div>
                     </div>
                     <div>
-                      <button
-                        type="button"
-                        onClick={() => plusCart(item)}
-                        // onClick={() => {
-                        //   setCartCount(cartCount + 1);
-                        // }}
-                      >
+                      <button type="button" onClick={() => plusCart(item)}>
                         <img src="images/shop.png" alt="" />
                       </button>
                     </div>

@@ -18,7 +18,16 @@ export default function CartProduct() {
       setProducts(res.data);
     });
   }, []);
-  // console.log(products);
+  const deleteCart = (id) => {
+    axios
+      .delete(`http://localhost:8000/plusCart/${id}`)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <>
       <div className="row py-5">
@@ -30,6 +39,7 @@ export default function CartProduct() {
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Subtotal</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -53,7 +63,7 @@ export default function CartProduct() {
                     >
                       -
                     </button>
-                    <button className="mx-3">{count}</button>
+                    <button className="mx-3">{product.count}</button>
                     <button
                       className="btn btn-secondary "
                       onClick={() => {
@@ -64,6 +74,16 @@ export default function CartProduct() {
                     </button>
                   </td>
                   <td>${Subtotal}</td>
+                  <td>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        deleteCart(product.id);
+                      }}
+                    >
+                      X
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>

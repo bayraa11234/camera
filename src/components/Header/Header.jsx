@@ -17,7 +17,8 @@ export default function Header() {
   const [navbar, setNavbar] = useState([]);
   const [products, setProducts] = useState([]);
   const [plusCart, setPlusCart] = useState([]);
-  const wishlist = useContext(UserContext);
+  const { wishlist } = useContext(UserContext);
+
   useEffect(() => {
     axios.get("http://localhost:8000/navbar").then((res) => {
       setNavbar(res.data);
