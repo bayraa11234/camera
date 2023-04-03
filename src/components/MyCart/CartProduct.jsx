@@ -17,7 +17,7 @@ export default function CartProduct() {
     axios.get("http://localhost:8000/plusCart").then((res) => {
       setProducts(res.data);
     });
-  }, []);
+  }, [products]);
   const deleteCart = (id) => {
     console.log(id);
     axios
@@ -27,6 +27,16 @@ export default function CartProduct() {
       })
       .catch((error) => {
         console.error(error);
+      });
+  };
+  const allDeleteCart = () => {
+    axios
+      .delete("http://localhost:8000/plusCart")
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
   return (
@@ -106,6 +116,7 @@ export default function CartProduct() {
             <button
               type="button"
               class="btn btn-outline-danger rounded-pill w-25"
+              onClick={allDeleteCart}
             >
               Clear Cart
             </button>

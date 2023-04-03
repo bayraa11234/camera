@@ -116,7 +116,7 @@ export default function Header() {
                       color: "#fff",
                     }}
                   >
-                    {setPlusCart.length}
+                    {plusCart.length}
                   </span>
                   Cart
                 </Link>
