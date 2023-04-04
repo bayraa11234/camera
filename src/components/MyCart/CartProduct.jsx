@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
 
 export default function CartProduct() {
   const [count, setCount] = useState(1);
@@ -105,7 +106,7 @@ export default function CartProduct() {
               class="btn rounded-pill py-2"
               style={{ backgroundColor: "#EDA415", width: "40%" }}
             >
-              Continue shopping
+              <Link to="/">Continue shopping</Link>
             </button>
             <button
               type="button"

@@ -4,8 +4,14 @@ import Carousel from "react-bootstrap/Carousel";
 
 const items = [
   { path: "/Camera.png", title: "Canon camera" },
-  { path: "/Camera.png", title: "Macbook m1" },
-  { path: "/Camera.png", title: "Phone" },
+  {
+    path: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1664472289661",
+    title: "Macbook m1",
+  },
+  {
+    path: "/iPhone.png",
+    title: "IPhone 14 promax",
+  },
 ];
 
 export default function Section() {
@@ -32,7 +38,10 @@ export default function Section() {
                 </div>
               </div>
               <div>
-                <PublicImage path={item.path} />
+                <PublicImage
+                  path={item.path}
+                  style={{ maxWidth: "330px", maxHeight: "306px" }}
+                />
               </div>
             </div>
           </Carousel.Item>

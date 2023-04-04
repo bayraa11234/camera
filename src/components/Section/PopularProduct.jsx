@@ -150,7 +150,7 @@ export default function PopularProduct() {
                         setWishlist(wishlist + 1);
                       }}
                     >
-                      {wishlist}
+                      {/* {wishlist} */}
                       <img
                         src="images/wishlist.png"
                         alt=""
