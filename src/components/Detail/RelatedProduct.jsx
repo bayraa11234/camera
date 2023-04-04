@@ -28,7 +28,7 @@ export default function RelatedProduct() {
                   <img src={item.image} alt="" className="card-img-top" />
                 </div>
                 <img
-                  src="images/wishlist.png"
+                  src="/images/wishlist.png"
                   alt=""
                   style={{ height: "30px" }}
                 />
@@ -43,7 +43,7 @@ export default function RelatedProduct() {
                     </div>
                   </div>
                   <div>
-                    <img src="images/shop.png" alt="" />
+                    <img src="/images/shop.png" alt="" />
                   </div>
                 </div>
               </div>

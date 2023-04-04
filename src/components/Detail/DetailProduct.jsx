@@ -1,24 +1,58 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import RatingSize from "../Rating";
 import { SiGoogle, SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 import RelatedProduct from "./RelatedProduct";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export default function DetailProduct() {
   const [count, setCount] = useState(1);
+  const [product, setProduct] = useState([]);
+  const { id } = useParams();
+  const getCartData = async () => {
+    const res = await axios.get(`http://localhost:8000/plusCart/${id}`);
+    const data = await res.data;
+    setProduct(data);
+  };
+  useEffect(() => {
+    getCartData();
+  }, []);
+
   return (
     <>
       <div className=" row d-flex">
         <div className="col-6">
-          <img src="./detailProduct/bidPlay.png" alt="" className="img-fluid" />
+          {/* <img src="./detailProduct/bidPlay.png" alt="" className="img-fluid" /> */}
+          <img
+            src={product.image}
+            alt=""
+            className="img-fluid"
+            style={{
+              width: "647px",
+              objectFit: "cover",
+              border: "1px solid #000",
+              borderRadius: "20px",
+            }}
+          />
           <div className="d-flex my-3 gap-2 ">
-            <img src="./detailProduct/Play.png" alt="" className="w-50" />
-            <img src="./detailProduct/Play.png" alt="" className="w-50" />
+            <img
+              src={product.image}
+              style={{ border: "1px solid #000", borderRadius: "20px" }}
+              alt=""
+              className="w-50"
+            />
+            <img
+              src={product.image}
+              alt=""
+              className="w-50"
+              style={{ border: "1px solid #000", borderRadius: "20px" }}
+            />
           </div>
         </div>
         <div className="col-6">
           <div style={{ borderBottom: "1px solid #5D5D5D" }}>
-            <h2>Play game</h2>
+            <h2>{product.title}</h2>
             <div
               style={{
                 margin: "0.5em 0 0.7em 0",
@@ -27,7 +61,7 @@ export default function DetailProduct() {
                 color: "#4A4A4A",
               }}
             >
-              $11,70
+              ${product.price}
             </div>
             <div className="d-flex">
               <h4>

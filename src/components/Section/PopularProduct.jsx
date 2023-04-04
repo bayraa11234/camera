@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import RatingSize from "../Rating";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 export const UserContext = React.createContext("");
 
@@ -54,14 +55,14 @@ export default function PopularProduct() {
         console.log(err);
       });
   }
-  function oneCart(item) {
+  function oneCart(id) {
     axios
-      .get("http://localhost:8000/plusCart", { item })
-      .then((res) => {
-        console.log(res.data);
+      .get(`http://localhost:8000/plusCart/${id}`)
+      .then((response) => {
+        console.log(response.data);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.error(error);
       });
   }
   // return (
@@ -130,14 +131,18 @@ export default function PopularProduct() {
         <div className="row g-4" style={{ boxSizing: "border-box" }}>
           {product.map((item) => (
             <div className="col-3">
-              <div
-                className="card p-2"
-                type="button"
-                onClick={() => oneCart(item)}
-              >
+              <div className="card p-2">
                 <div className="d-flex justify-content-between">
                   <div>
-                    <img src={item.image} alt="" className="card-img-top" />
+                    <Link to={"detail/" + item.id}>
+                      <img
+                        src={item.image}
+                        alt=""
+                        className="card-img-top"
+                        type="button"
+                        onClick={() => oneCart(item.id)}
+                      />
+                    </Link>
                   </div>
                   <div>
                     <button
